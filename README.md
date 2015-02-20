@@ -14,7 +14,7 @@ Submit using Blackboard
 
 
 What to turn in:
-###Project 1
+###Part 1
 
 * Single zip file (your_career_login1_your_career_login2_bufmgr.zip)
 * ReadMe.txt with
@@ -23,7 +23,7 @@ What to turn in:
      * Things to know to compile/run program
 * Don't include libraries
 
-### Project 2 & 3
+### Part 2 & 3
 
 * Single zip file (your_career_login1_your_career_login2_heapfile.zip)
 * ReadMe.txt with

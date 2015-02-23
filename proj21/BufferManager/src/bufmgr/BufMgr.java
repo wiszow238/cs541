@@ -3,6 +3,7 @@ package bufmgr;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Hashtable;
 //Not sure if needed///////////
 import global.Convert;
 import global.GlobalConst;
@@ -10,19 +11,19 @@ import global.Minibase;
 ///////////////////////////////
 import global.PageId;
 import global.Page;
-import global.SystemDefs;
+//import global.SystemDefs;
 import diskmgr.DiskMgr;
 import diskmgr.DiskMgrException;
-import diskmgr.FileIOException;
+//import diskmgr.FileIOException;
 import diskmgr.InvalidPageNumberException;
 import diskmgr.InvalidRunSizeException;
-import diskmgr.PageUnpinnedException;
+//import diskmgr.PageUnpinnedException;
 
 public class BufMgr {
 	private Page[] bufPool;
 	private Queue<Integer> queue;
 	private int nbuffs;
-	private HashTable<Integer, Integer> hash;
+	private Hashtable<Integer, Integer> hash;
 /**
 * Create the BufMgr object.
 * Allocate pages (frames) for the buffer pool in main memory and
@@ -49,7 +50,7 @@ public BufMgr(int numbufs, int lookAheadSize, String replacementPolicy) {};
 *
 * @param pageno page number in the Minibase.
 * @param page the pointer point to the page.
-* @param emptyPage true (empty page); false (non­empty page)
+* @param emptyPage true (empty page); false (nonempty page)
 */
 public void pinPage(PageId pageno, Page page, boolean emptyPage) {};
 /**
@@ -82,7 +83,7 @@ public void unpinPage(PageId pageno, boolean dirty) {};
 *
 * @return the first page id of the new pages.__ null, if error.
 */
-public PageId newPage(Page firstpage, int howmany) {};
+public PageId newPage(Page firstpage, int howmany) {return new PageId();};
 /**
 * This method should be called to delete a page that is on disk.
 * This routine must call the method in diskmgr package to
@@ -106,9 +107,9 @@ public void flushAllPages() {};
 /**
 * Returns the total number of buffer frames.
 */
-public int getNumBuffers() {}
+public int getNumBuffers() {return 0;};
 /**
 * Returns the total number of unpinned buffer frames.
 */
-public int getNumUnpinned() {}
+public int getNumUnpinned() {return 0;};
 };

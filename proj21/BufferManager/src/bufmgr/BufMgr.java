@@ -4,20 +4,16 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Hashtable;
-//Not sure if needed///////////
 import global.Convert;
 import global.GlobalConst;
 import global.Minibase;
-///////////////////////////////
 import global.PageId;
 import global.Page;
-//import global.SystemDefs;
 import diskmgr.DiskMgr;
 import diskmgr.DiskMgrException;
-//import diskmgr.FileIOException;
+import diskmgr.FileIOException;
 import diskmgr.InvalidPageNumberException;
 import diskmgr.InvalidRunSizeException;
-//import diskmgr.PageUnpinnedException;
 
 public class BufMgr {
 	private Page[] pool;

@@ -1,7 +1,12 @@
 This is a repository for a databases class.
 
+[Minibase home page](http://research.cs.wisc.edu/coral/mini_doc/minibase.html)
 
-[Minibase home page](https://www.cs.purdue.edu/homes/aref/Spring2015CS541/mini_doc-2.0/spaceMgr/dsm.html)
+[Minibase Overview](http://research.cs.wisc.edu/coral/mini_doc/intro/single_user.html)
+
+[Minibase Components](http://research.cs.wisc.edu/coral/mini_doc/project.html)
+
+[Minibase home page (Aref)](https://www.cs.purdue.edu/homes/aref/Spring2015CS541/mini_doc-2.0/spaceMgr/dsm.html)
 
 ---
 #Project2

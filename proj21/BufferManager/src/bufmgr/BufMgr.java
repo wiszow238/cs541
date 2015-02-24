@@ -20,9 +20,9 @@ import diskmgr.InvalidRunSizeException;
 //import diskmgr.PageUnpinnedException;
 
 public class BufMgr {
-	private Page[] bufPool;
+	private Page[] pool;
 	private Queue<Integer> queue;
-	private int nbuffs;
+	private int numbufs;
 	private Hashtable<Integer, Integer> hash;
 /**
 * Create the BufMgr object.
@@ -33,7 +33,11 @@ public class BufMgr {
 * @param?lookAheadSize number of pages to be looked ahead
 * @param?replacementPolicy Name of the replacement policy
 */
-public BufMgr(int numbufs, int lookAheadSize, String replacementPolicy) {};
+public BufMgr(int numbufs, int lookAheadSize, String replacementPolicy) {
+	this.numbufs = numbufs;
+	this.pool = new Page[numbufs];
+	
+};
 /**
 * Pin a page.
 * First check if this page is already in the buffer pool.

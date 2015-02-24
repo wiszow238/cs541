@@ -348,13 +348,13 @@ class BMDriver extends TestDriver implements GlobalConst {
 			try {
 				Minibase.BufferManager.pinPage( lastPid, pg, /*emptyPage:*/ false );
 			}
-			catch (ChainException e) { 
-				status = checkException (e, "bufmgr.BufferPoolExceededException");
-				if (status == FAIL) {
-					System.err.print("*** Pinning too many pages\n");
-					System.out.println ("  --> Failed as expected \n");
-				}
-			}
+//			catch (ChainException e) { 
+//				status = checkException (e, "bufmgr.BufferPoolExceededException");
+//				if (status == FAIL) {
+//					System.err.print("*** Pinning too many pages\n");
+//					System.out.println ("  --> Failed as expected \n");
+//				}
+//			}
 			catch (Exception e) {e.printStackTrace();}
 
 			if (status == OK) {
@@ -382,14 +382,14 @@ class BMDriver extends TestDriver implements GlobalConst {
 					Minibase.BufferManager.freePage( firstPid );
 				}
 
-				catch (ChainException e) {
-					status = checkException (e, "bufmgr.PagePinnedException");
-
-					if (status == FAIL) {
-						System.err.print("*** Freeing a pinned page\n");
-						System.out.println ("  --> Failed as expected \n");
-					}
-				}
+//				catch (ChainException e) {
+//					status = checkException (e, "bufmgr.PagePinnedException");
+//
+//					if (status == FAIL) {
+//						System.err.print("*** Freeing a pinned page\n");
+//						System.out.println ("  --> Failed as expected \n");
+//					}
+//				}
 
 				catch (Exception e) {
 					e.printStackTrace();
@@ -420,14 +420,14 @@ class BMDriver extends TestDriver implements GlobalConst {
 			try {
 				Minibase.BufferManager.unpinPage( lastPid, false );
 			}
-			catch (ChainException e) { 
-				status = checkException (e, "bufmgr.HashEntryNotFoundException");
-
-				if (status == FAIL) {
-					System.err.print("*** Unpinning a page not in the buffer pool\n"); 
-					System.out.println ("  --> Failed as expected \n");
-				}
-			}
+//			catch (ChainException e) { 
+//				status = checkException (e, "bufmgr.HashEntryNotFoundException");
+//
+//				if (status == FAIL) {
+//					System.err.print("*** Unpinning a page not in the buffer pool\n"); 
+//					System.out.println ("  --> Failed as expected \n");
+//				}
+//			}
 			catch (Exception e) {
 				e.printStackTrace();
 			}
